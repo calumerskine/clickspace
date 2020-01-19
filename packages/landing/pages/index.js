@@ -1,65 +1,67 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Head from 'next/head';
-import Sticky from 'react-stickynode';
 import { ThemeProvider } from 'styled-components';
-import { agencyTheme } from 'common/src/theme/agency';
+import Sticky from 'react-stickynode';
+import { hostingTheme } from 'common/src/theme/hosting';
+import {
+  GlobalStyle,
+  ContentWrapper,
+} from '../containers/Hosting/hosting.style';
 import { ResetCSS } from 'common/src/assets/css/style';
-import { GlobalStyle, AgencyWrapper } from '../containers/Agency/agency.style';
-import Navbar from '../containers/Agency/Navbar';
-import BannerSection from '../containers/Agency/BannerSection';
-import FeatureSection from '../containers/Agency/FeatureSection';
-import AboutUsSection from '../containers/Agency/AboutUsSection';
-import WorkHistory from '../containers/Agency/WorkHistory';
-import BlogSection from '../containers/Agency/BlogSection';
-import TestimonialSection from '../containers/Agency/TestimonialSection';
-import TeamSection from '../containers/Agency/TeamSection';
-import VideoSection from '../containers/Agency/VideoSection';
-import NewsletterSection from '../containers/Agency/NewsletterSection';
-import QualitySection from '../containers/Agency/QualitySection';
-import Footer from '../containers/Agency/Footer';
+import Navbar from '../containers/Hosting/Navbar';
+import FeatureSection from '../containers/Hosting/Features';
+import InfoSection from '../containers/Hosting/Info';
+import DomainSection from '../containers/Hosting/Domain';
+import PaymentSection from '../containers/Hosting/Payment';
+import GuaranteeSection from '../containers/Hosting/Guarantee';
+import ServicesSection from '../containers/Hosting/Services';
+import BannerSection from '../containers/Hosting/Banner';
+import PricingSection from '../containers/Hosting/Pricing';
+import TestimonialSection from '../containers/Hosting/Testimonials';
+import ContactSection from '../containers/Hosting/Contact';
+import Footer from '../containers/Hosting/Footer';
 import { DrawerProvider } from 'common/src/contexts/DrawerContext';
-import FaqSection from '../containers/Agency/FaqSection';
+import { ParallaxProvider } from 'react-scroll-parallax';
+import FaqSection from '../containers/Hosting/Faq';
 
 export default () => {
   return (
-    <ThemeProvider theme={agencyTheme}>
-      <Fragment>
-        {/* Start agency head section */}
+    <ThemeProvider theme={hostingTheme}>
+      <ParallaxProvider>
         <Head>
-          <title>Agency | A react next landing page</title>
-          <meta name="theme-color" content="#10ac84" />
+          <title>Hosting | A react next landing page</title>
           <meta name="Description" content="React next landing page" />
-          {/* Load google fonts */}
+          <meta name="theme-color" content="#eb4d4b" />
           <link
-            href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900|Open+Sans:400,400i,600,700"
             rel="stylesheet"
           />
         </Head>
+
         <ResetCSS />
         <GlobalStyle />
-        {/* End of agency head section */}
-        {/* Start agency wrapper section */}
-        <AgencyWrapper>
+
+        <ContentWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
             <DrawerProvider>
               <Navbar />
             </DrawerProvider>
           </Sticky>
+
           <BannerSection />
           <FeatureSection />
-          <AboutUsSection />
-          <WorkHistory />
-          <BlogSection />
-          <QualitySection />
-          <VideoSection />
+          <InfoSection />
+          <PricingSection />
+          <DomainSection />
+          <ServicesSection />
+          <PaymentSection />
           <TestimonialSection />
-          <TeamSection />
+          <GuaranteeSection />
           <FaqSection />
-          <NewsletterSection />
+          <ContactSection />
           <Footer />
-        </AgencyWrapper>
-        {/* End of agency wrapper section */}
-      </Fragment>
+        </ContentWrapper>
+      </ParallaxProvider>
     </ThemeProvider>
   );
 };
