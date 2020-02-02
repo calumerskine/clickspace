@@ -39,24 +39,24 @@ export const FEATURES_DATA = [
 export const FAQ_DATA = [
   {
     expend: true,
-    title: 'How to contact with Customer Service?',
+    title: `I can't afford it`,
     description:
-      'Our Customer Experience Team is available 7 days a week and we offer 2 ways to get in contact.Email and Chat . We try to reply quickly, so you need not to wait too long for a response!. ',
+      'Not utilising online marketing can be costly. We will first determine a cost of conversion for each lead, then attempt to lower it so that your budget is always working for you.',
   },
   {
-    title: 'App installation failed, how to update system information?',
+    title: `I don't see its use`,
     description:
-      'Please read the documentation carefully . We also have some online  video tutorials regarding this issue . If the problem remains, Please Open a ticket in the support forum . ',
+      'It allows you to predictably increase leads. It gives you control of those leads to suit objectives.',
   },
   {
-    title: 'Website reponse taking time, how to improve?',
+    title: 'I already have something similar',
     description:
-      'At first, Please check your internet connection . We also have some online  video tutorials regarding this issue . If the problem remains, Please Open a ticket in the support forum .',
+      'Is it effective and cost-efficient? Have you seen an increase in sales? Do you have full visibility? Is it an enjoyable service?',
   },
   {
-    title: 'New update fixed all bug and issues?',
+    title: 'I tried this before and it never worked',
     description:
-      'We are giving the update of this theme continuously . You will receive an email Notification when we push an update. Always try to be updated with us .',
+      `Perhaps campaigns weren't effectively designed or the budget wasn't directed well enough. We can work together to deliver something more aligned to the business goals.`,
   },
 ];
 

@@ -37,8 +37,8 @@ const FaqSection = ({
     <Box {...sectionWrapper}>
       <Container>
         <Box {...secTitleWrapper}>
-          <Text {...secText} content="FREQUENTLY ASK QUESTION" />
-          <Heading {...secHeading} content="Want to ask something from us?" />
+          <Text {...secText} content="KNOWLEDGE BASE" />
+          <Heading {...secHeading} content="Frequently Asked Questions" />
         </Box>
         <Box {...row}>
           <Box {...col}>
@@ -78,7 +78,7 @@ const FaqSection = ({
             <Box {...buttonWrapper}>
               <Link href="#">
                 <a>
-                  <Button {...button} title="EXPLORE FORUM" />
+                  <Button {...button} title="START YOUR FREE TRIAL" />
                 </a>
               </Link>
             </Box>

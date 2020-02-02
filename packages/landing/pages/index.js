@@ -15,6 +15,7 @@ import ProblemsSection from '../containers/Hosting/Problems';
 import DomainSection from '../containers/Hosting/Domain';
 import PaymentSection from '../containers/Hosting/Payment';
 import GuaranteeSection from '../containers/Hosting/Guarantee';
+import AuditSection from '../containers/Hosting/Audit';
 import ServicesSection from '../containers/Hosting/Services';
 import BannerSection from '../containers/Hosting/Banner';
 import PricingSection from '../containers/Hosting/Pricing';
@@ -55,10 +56,11 @@ export default () => {
           <DomainSection />
           <FeatureSection />
           <PaymentSection />
+          <AuditSection />
           <ServicesSection />
+          <TestimonialSection />
           <PricingSection />
           <GuaranteeSection />
-          <TestimonialSection />
           <FaqSection />
           <ContactSection />
           <Footer />
