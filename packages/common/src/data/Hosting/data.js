@@ -63,33 +63,33 @@ export const FAQ_DATA = [
 // Service Section Content
 export const SERVICES_DATA = [
   {
-    title: 'Development Server ',
+    title: 'Grow leads',
     description:
-      'Get Lightspeed Development Server for your website and fly in the web',
+      'Keep increasing the number of visitors for higher conversions',
     icon: `${IconOne}`,
   },
   {
-    title: 'Web Protection',
+    title: 'Track and optimise traffic',
     description:
-      'Best Protection and some tools are provided with our Web servers .',
+      'Get detailed statistics on comster traffic to optimise',
     icon: `${IconTwo}`,
   },
   {
-    title: 'E-commerce Shop',
+    title: 'Expand customer base',
     description:
-      'You can build any kind of E-commerce Shop with payment security tools',
+      'Tap into even more audiences using various services',
     icon: `${IconThree}`,
   },
   {
-    title: 'Money Back Guarantee',
+    title: 'Controlled budget',
     description:
-      'We have provided 30 days money back guarantee for our customer',
+      'Track costs of individual clicks to never exceed your budget',
     icon: `${IconFour}`,
   },
   {
-    title: 'Client Satisfaction',
+    title: 'Increase revenue',
     description:
-      'Client Satisfaction is our first priority and We are best at it',
+      'Boost your business value from higher conversions and lower costs',
     icon: `${IconFive}`,
   },
   {

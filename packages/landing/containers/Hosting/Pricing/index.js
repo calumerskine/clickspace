@@ -111,7 +111,7 @@ const PricingSection = ({
             <Text {...secText} content="PRICING PLAN" />
             <Heading
               {...secHeading}
-              content="What’s our monthly pricing subscription"
+              content="Find a package that suits your business objectives"
             />
             <SwitchWrapper>
               <Switch
