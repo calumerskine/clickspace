@@ -11,6 +11,7 @@ import { ResetCSS } from 'common/src/assets/css/style';
 import Navbar from '../containers/Hosting/Navbar';
 import FeatureSection from '../containers/Hosting/Features';
 import InfoSection from '../containers/Hosting/Info';
+import ProblemsSection from '../containers/Hosting/Problems';
 import DomainSection from '../containers/Hosting/Domain';
 import PaymentSection from '../containers/Hosting/Payment';
 import GuaranteeSection from '../containers/Hosting/Guarantee';
@@ -29,8 +30,8 @@ export default () => {
     <ThemeProvider theme={hostingTheme}>
       <ParallaxProvider>
         <Head>
-          <title>Hosting | A react next landing page</title>
-          <meta name="Description" content="React next landing page" />
+          <title>MC Social</title>
+          <meta name="Description" content="MC Social" />
           <meta name="theme-color" content="#eb4d4b" />
           <link
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900|Open+Sans:400,400i,600,700"
@@ -49,14 +50,15 @@ export default () => {
           </Sticky>
 
           <BannerSection />
-          <FeatureSection />
+          <ProblemsSection />
           <InfoSection />
-          <PricingSection />
           <DomainSection />
-          <ServicesSection />
+          <FeatureSection />
           <PaymentSection />
-          <TestimonialSection />
+          <ServicesSection />
+          <PricingSection />
           <GuaranteeSection />
+          <TestimonialSection />
           <FaqSection />
           <ContactSection />
           <Footer />

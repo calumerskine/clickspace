@@ -13,24 +13,24 @@ import {
 // Feature Section Content
 export const FEATURES_DATA = [
   {
-    title: 'Domain Registration & Web Hosting',
+    title: 'Customer Targeting',
     description:
-      'We have support team for 24/7 operation. They provide help and ongoing assistance at any time.',
-    icon: 'flaticon-trophy violate',
+      'Isolate specific audiences using search factors across intent, context and granular demographics. Get specific on what consumers need in real time',
+    icon: 'flaticon-objective violate',
     animation: true,
   },
   {
-    title: 'Website Design & Development',
+    title: 'Process Selection',
     description:
-      'Transferring from another host? Our expert support team is standing by to transfer your site.',
-    icon: 'flaticon-startup yellow',
+      'Utilise a wide range of services to maximise visibility from your customers. Leverage paid search, remarketing, display advertising and more.',
+    icon: 'flaticon-strategy yellow',
     animation: true,
   },
   {
-    title: 'Dedicated Server & Cloud Hosting',
+    title: 'Detailed Reporting',
     description:
-      'LiteSpeed Web Server is a high-performance HTTP server and known for its high performance.',
-    icon: 'flaticon-creative green',
+      'Ensure your campaigns are bringing benefit. Analyse clicks, impressions, conversion costs and more to influence further optimisation.',
+    icon: 'flaticon-conversation green',
     animation: true,
   },
 ];

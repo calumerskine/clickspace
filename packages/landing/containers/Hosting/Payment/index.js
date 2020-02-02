@@ -32,11 +32,20 @@ const PaymentSection = ({
             <Fade bottom cascade>
               <Heading
                 {...title}
-                content="We have supported all payment gateways on domain hosting"
+                content="Retargeted Services"
               />
               <Text
                 {...description}
-                content="You can pay your bills with your desired payment system. No pain of using a specific credit card for bill payments"
+                content="You’ve likely run into retargeting ads without realizing it. Boiling down remarketing (retargeting) efforts to their essence simplifies it: Visitors to your site are identified and tagged, which follows them around onto other sites. When that user reaches another Display Network or Search Network site, an ad is served up just for them.
+
+                Step 1: Potential Customer Visits Site
+                Step 2: Potential Customer Leaves Without Checking Out
+                Step 3: Potential Customer Goes Online Later
+                Step 4: Potential Customer Visits Sees Your Retargeting Advertisement
+                Step 5: The Potential Customer Returns To Your Site
+                Step 6: Another Opportunity To Convert Your Potential Customer Into A Customer
+
+                Retargeting is an incredible tool for creating and fostering top-of-mind awareness. When a potential customer thinks of your brand first within your product category, that gives you a huge advantage. It is human nature to like things to which you are familiar. and that is the true power of retargeting."
               />
               <Box>
                 <Link href="#">

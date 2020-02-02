@@ -13,12 +13,13 @@ import Container from 'common/src/components/UI/Container';
 import ImageOne from 'common/src/assets/image/hosting/info1.png';
 import ImageTwo from 'common/src/assets/image/hosting/info2.png';
 
-const InfoSection = ({
+const ProblemsSection = ({
   sectionWrapper,
   row,
   col,
   title,
   description,
+  secText,
   button,
   textArea,
   imageArea,
@@ -31,28 +32,44 @@ const InfoSection = ({
     <Box {...sectionWrapper}>
       <Container>
         <Box {...row}>
-          <Box {...col} {...textArea}>
-            <Fade bottom cascade>
-              <Heading
-                {...title}
-                content="What is PPC?"
-              />
-              <Text
-                {...description}
-                content="PPC is a reliable vehicle for targeted web traffic that you can safely budget for in your marketing strategy. Pay-Per-Click is a proven tactic to give your business immediate results, and provides a steady stream of traffic. If you’re looking to implement an digital marketing strategy that’s a quick and easy way to put your website in front of your target audience, then PPC is the channel to leverage."
-              />
-              <Box>
-                <Link href="#">
-                  <a>
-                    <Button {...button} title="HOW IT WORKS" />
-                  </a>
-                </Link>
+          <Fade bottom cascade>
+            <Box {...row}>
+              <Box {...col}>
+                <Text {...secText} content="PROBLEM" />
+                <Heading
+                  {...title}
+                  content="Its hard to stand out"
+                />
               </Box>
-            </Fade>
-          </Box>
+            </Box>
+
+            <Box {...row}>
+              <Box {...col} {...textArea}>
+                <Text
+                  {...description}
+                  content="Whether you're looking for more visitors on your site, trying to expand your reach or just want to increase sales, pay per click advertising can help. Its a way to target consumers who are already searching for your products and services. PPC helps your customers cut through the online noise by directing them straight to you."
+                />
+              </Box>
+              <Box {...col} {...textArea}>
+                <Text
+                  {...description}
+                  content="With the right campaign, you can leverage PPC to immediately see increased traffic and begin transforming leads into new customers. Through further analysis and optimisation, you'll then be able to create strong interest in your business month on month by tweaking the use of bids, devices, specific audiences and more."
+                />
+              </Box>
+            </Box>
+          </Fade>
+          <Fade bottom cascade>
+            {/* <Box>
+              <Link href="#">
+                <a>
+                  <Button {...button} title="HOW IT WORKS" />
+                </a>
+              </Link>
+            </Box> */}
+          </Fade>
         </Box>
       </Container>
-      <Container fullWidth noGutter className="info-sec-container">
+      {/* <Container fullWidth noGutter className="info-sec-container">
         <Box {...row} {...imageAreaRow}>
           <Box {...col} {...imageArea}>
             <Card {...imageWrapper} {...imageWrapperOne}>
@@ -67,18 +84,19 @@ const InfoSection = ({
             </Card>
           </Box>
         </Box>
-      </Container>
+      </Container> */}
     </Box>
   );
 };
 
-InfoSection.propTypes = {
+ProblemsSection.propTypes = {
   sectionWrapper: PropTypes.object,
   row: PropTypes.object,
   col: PropTypes.object,
   title: PropTypes.object,
   description: PropTypes.object,
   button: PropTypes.object,
+  secText: PropTypes.object,
   textArea: PropTypes.object,
   imageArea: PropTypes.object,
   imageAreaRow: PropTypes.object,
@@ -87,7 +105,7 @@ InfoSection.propTypes = {
   imageWrapperTwo: PropTypes.object,
 };
 
-InfoSection.defaultProps = {
+ProblemsSection.defaultProps = {
   sectionWrapper: {
     as: 'section',
     pt: ['0px', '0px', '0px', '0px', '80px'],
@@ -97,6 +115,7 @@ InfoSection.defaultProps = {
   row: {
     flexBox: true,
     flexWrap: 'wrap',
+    justifyContent: 'space-around',
     ml: '-15px',
     mr: '-15px',
   },
@@ -125,6 +144,16 @@ InfoSection.defaultProps = {
     alignSelf: 'flex-end',
     mb: '-60px',
   },
+  secText: {
+    as: 'span',
+    display: 'block',
+    textAlign: 'center',
+    fontSize: '14px',
+    letterSpacing: '0.15em',
+    fontWeight: '700',
+    color: '#eb4d4b',
+    mb: '10px',
+  },
   title: {
     fontSize: ['30px', '38px', '38px', '48px', '48px'],
     fontWeight: '300',
@@ -151,4 +180,4 @@ InfoSection.defaultProps = {
   },
 };
 
-export default InfoSection;
+export default ProblemsSection;

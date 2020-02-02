@@ -32,7 +32,7 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
           <Logo
             href="#"
             logoSrc={LogoImage}
-            title="Agency"
+            title="MC Social"
             logoStyle={logoStyle}
           />
           <Box {...menuWrapper}>

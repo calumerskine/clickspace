@@ -25,21 +25,21 @@ const GuaranteeSection = ({
         <Box {...row}>
           <Box {...textArea}>
             <Fade bottom cascade>
-              <Heading {...title} content="30 Days Money Back Guarantee" />
+              <Heading {...title} content="Guaranteed peace of mind" />
               <Text
                 {...description}
-                content="We have provided 30 Days Money Back Guarantee in case of dissatisfaction with our product. We care for our customers and their values. "
+                content="If you don't see value in working with us within the first 30 days, we offer a full refund, no questions asked."
               />
             </Fade>
           </Box>
         </Box>
-        <Box {...row}>
+        {/* <Box {...row}>
           <Box {...imageArea}>
             <Zoom>
               <Image {...ImageOne} src={GuaranteeImage} alt="Guarantee" />
             </Zoom>
           </Box>
-        </Box>
+        </Box> */}
       </Container>
     </Box>
   );

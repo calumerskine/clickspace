@@ -32,7 +32,7 @@ const ServicesSection = ({
               <Text {...secText} content="OUR SERVICES" />
               <Heading
                 {...secHeading}
-                content="What Featured Service that We Provide"
+                content="How we can help your business thrive"
               />
             </Fade>
           </Box>

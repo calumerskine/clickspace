@@ -37,25 +37,30 @@ const BannerSection = ({
       <Container className="banner_container">
         <Box {...row}>
           <Box {...textArea}>
-            <DiscountWrapper>
+            {/* <DiscountWrapper>
               <DiscountLabel>
-                <Text {...discountAmount} content="25% Discount" />
+                <Text {...discountAmount} content="50% Discount" />
                 <Text
                   {...discountText}
-                  content="on every first annual purchase"
+                  content="this month only"
                 />
               </DiscountLabel>
-            </DiscountWrapper>
-            <Heading
-              {...title}
-              content="The best webhosting starting at $12.98/month"
-            />
+            </DiscountWrapper> */}
+            <Heading {...title}>
+              Build a <b>strategy</b>, drive more sales and <b>grow</b> your customer base
+            </Heading>
+
+            {/* <Text
+              {...description}
+              content={<p></p>}
+            /> */}
             <Text
               {...description}
-              content=" For Enhanced performance we use LiteSpeed Web Server, HTTP/2, PHP7. We make your website faster, which will help you to increase search ranking!"
-            />
+            >
+              Navigating the online marketing world can be daunting. Without a digital partner, it can be hard to focus on your business whilst trying to design and run effective campaigns. Keeping them cost efficient is even harder.
+            </Text>
           </Box>
-          <Box {...searchArea}>
+          {/* <Box {...searchArea}>
             <SearchWrapper>
               <Input
                 inputType="text"
@@ -89,7 +94,7 @@ const BannerSection = ({
                 </li>
               ))}
             </List>
-          </Box>
+          </Box> */}
         </Box>
       </Container>
     </BannerWrapper>

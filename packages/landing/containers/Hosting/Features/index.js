@@ -31,10 +31,10 @@ const FeatureSection = ({
       <Container>
         <Box {...secTitleWrapper}>
           <Fade bottom cascade>
-            <Text {...secText} content="OUR SERVICES" />
+            <Text {...secText} content="SOLUTION" />
             <Heading
               {...secHeading}
-              content="Our Featured Service that We Provide"
+              content="How PPC can help your business grow"
             />
           </Fade>
         </Box>

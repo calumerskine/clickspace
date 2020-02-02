@@ -32,11 +32,20 @@ const DomainSection = ({
             <Fade bottom cascade>
               <Heading
                 {...title}
-                content="Available domain extension with your custom name"
+                content="Traditional Services"
               />
               <Text
                 {...description}
-                content="You can check the domain avaibility by our domain tool and choose your desired domain without any hagitation if available."
+                content="Pay-per-click advertising, or PPC, is an integral part of most successful digital marketing campaigns. It empowers businesses to pay for the traffic they receive. Pay-per-click allows advertisers to bid, be seen, and only pay for the clicks they receive on their ad.
+
+                In every traditional PPC campaign, our team carries out detailed research and analysis, that leads to measurable results in website traffic, conversions, and revenue:
+
+                Keyword Research
+                Competitive Research
+                Account Setup
+                Landing Page Analysis
+                Landing Page Optimization
+                Ongoing Monitoring & Optimization"
               />
               <Box>
                 <Link href="#">
