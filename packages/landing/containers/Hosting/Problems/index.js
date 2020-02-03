@@ -29,7 +29,7 @@ const ProblemsSection = ({
   imageWrapperTwo,
 }) => {
   return (
-    <Box {...sectionWrapper}>
+    <Box {...sectionWrapper} id="about_section">
       <Container>
         <Box {...row}>
           <Fade bottom cascade>
@@ -151,7 +151,7 @@ ProblemsSection.defaultProps = {
     fontSize: '14px',
     letterSpacing: '0.15em',
     fontWeight: '700',
-    color: '#eb4d4b',
+    color: '#1100ff',
     mb: '10px',
   },
   title: {

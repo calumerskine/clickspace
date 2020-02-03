@@ -1,6 +1,18 @@
 import styled from 'styled-components';
 
-const ContactFromWrapper = styled.div`
+export const ListItem = styled.div`
+  display: flex;
+  margin-bottom: 19px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .price_list_icon {
+    color: #18d379;
+    margin-right: 10px;
+  }
+`;
+
+export const ContactFromWrapper = styled.div`
   display: flex;
   align-items: stretch;
   width: 490px;
@@ -60,5 +72,3 @@ const ContactFromWrapper = styled.div`
     height: 100%;
   }
 `;
-
-export default ContactFromWrapper;

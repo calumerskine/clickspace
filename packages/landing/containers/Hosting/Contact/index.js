@@ -6,8 +6,12 @@ import Heading from 'reusecore/src/elements/Heading';
 import Button from 'reusecore/src/elements/Button';
 import Input from 'reusecore/src/elements/Input';
 import Container from 'common/src/components/UI/Container';
+import List from 'common/src/components/List';
 
-import ContactFromWrapper from './contact.style';
+import {
+  ContactFromWrapper,
+  ListItem
+} from './contact.style';
 
 const ContactSection = ({
   sectionWrapper,
@@ -18,16 +22,29 @@ const ContactSection = ({
   secText,
   button,
   note,
+  stepsList,
 }) => {
   return (
     <Box {...sectionWrapper}>
       <Container>
         <Box {...secTitleWrapper}>
-          <Text {...secText} content="CONTACT US" />
+          <Text {...secText} content="GET STARTED" />
           <Heading
             {...secHeading}
-            content="Ready to start growing your business?"
+            content="What happens now?"
           />
+        </Box>
+        <Box {...row}>
+          <List>
+            {['1', '2', '3'].map((item, index) => (
+              <ListItem key={`footer-list-item-${index}`}>
+                <Text>
+                  {item}
+                </Text>
+              </ListItem>
+            ))}
+          </List>
+
         </Box>
         <Box {...row}>
           <Box {...contactForm}>
@@ -40,12 +57,8 @@ const ContactSection = ({
                 className="email_input"
                 aria-label="email"
               />
-              <Button {...button} title="START YOUR FREE TRIAL" />
+              <Button {...button} title="REQUEST YOUR FREE AUDIT" />
             </ContactFromWrapper>
-            {/* <Text
-              {...note}
-              content="Note: Please call us at 12pm to 8am. otherwise our customer supporter will not  available to reach your call, but you can drop mail anytime."
-            /> */}
           </Box>
         </Box>
       </Container>
@@ -62,6 +75,7 @@ ContactSection.propTypes = {
   secText: PropTypes.object,
   button: PropTypes.object,
   note: PropTypes.object,
+  stepsList: PropTypes.object,
 };
 
 ContactSection.defaultProps = {
@@ -116,6 +130,9 @@ ContactSection.defaultProps = {
     lineHeight: '1.87',
     textAlign: 'center',
   },
+  stepsList: {
+    mb: `${12}`,
+  }
 };
 
 export default ContactSection;

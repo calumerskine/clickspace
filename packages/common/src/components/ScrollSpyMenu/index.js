@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Scrollspy from 'react-scrollspy';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
+import Button from 'reusecore/src/elements/Button';
+
 import { DrawerContext } from '../../contexts/DrawerContext';
 
 const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
@@ -49,11 +51,17 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
                   offset={menu.offset}
                   onClick={toggleDrawer}
                 >
-                  {menu.label}
+                  {menu.button
+                    ? <Button {...props.button} title={menu.label} />
+                    : menu.label
+                  }
                 </AnchorLink>
               ) : (
                 <AnchorLink href={menu.path} offset={menu.offset}>
-                  {menu.label}
+                  {menu.button
+                    ? <Button {...props.button} title={menu.label} />
+                    : menu.label
+                  }
                 </AnchorLink>
               )}
             </>
@@ -95,11 +103,24 @@ ScrollSpyMenu.propTypes = {
    * Function to be executed when the active item has been updated [optional].
    */
   onUpdate: PropTypes.func,
+  buttno: PropTypes.object,
 };
 
 ScrollSpyMenu.defaultProps = {
   componentTag: 'ul',
   currentClassName: 'is-current',
+  button: {
+    type: 'button',
+    fontSize: '13px',
+    fontWeight: '600',
+    color: 'white',
+    borderRadius: '4px',
+    pl: '15px',
+    pr: '15px',
+    colors: 'primaryWithBg',
+    minHeight: 'auto',
+    height: `${1}`,
+  },
 };
 
 export default ScrollSpyMenu;

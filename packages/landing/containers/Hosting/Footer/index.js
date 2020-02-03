@@ -20,23 +20,22 @@ const Footer = ({
   titleStyle,
   logoStyle,
   textStyle,
+  headingStyle,
 }) => {
   return (
     <FooterWrapper>
       <Container className="footer_container">
         <Box className="row" {...row}>
           <Box {...colOne}>
-            <Logo
-              href="#"
-              logoSrc={LogoImage}
-              title="Hosting"
-              logoStyle={logoStyle}
+            <Heading {...headingStyle}
+              content='Click Space.'
             />
-            <Text content="hello@redq.io" {...textStyle} />
-            <Text content="+479-443-9334" {...textStyle} />
+            <Text content="&copy; Click Space 2020" {...textStyle} />
+            {/* <Text content="hello@clickspaceagency.com" {...textStyle} /> */}
+            {/* <Text content="+44 1234 567765" {...textStyle} /> */}
           </Box>
           {/* End of footer logo column */}
-          <Box {...colTwo}>
+          {/* <Box {...colTwo}>
             {FOOTER_WIDGET.map((widget, index) => (
               <Box className="col" {...col} key={`footer-widget-${index}`}>
                 <Heading content={widget.title} {...titleStyle} />
@@ -51,7 +50,7 @@ const Footer = ({
                 </List>
               </Box>
             ))}
-          </Box>
+          </Box> */}
           {/* End of footer List column */}
         </Box>
       </Container>
@@ -68,6 +67,7 @@ Footer.propTypes = {
   titleStyle: PropTypes.object,
   textStyle: PropTypes.object,
   logoStyle: PropTypes.object,
+  headingStyle: PropTypes.object
 };
 
 // Footer default style
@@ -115,9 +115,12 @@ Footer.defaultProps = {
   // widget text default style
   textStyle: {
     color: '#0f2137',
-    fontSize: '16px',
+    fontSize: '14px',
     mb: '10px',
   },
+  headingStyle: {
+    mb: 0,
+  }
 };
 
 export default Footer;

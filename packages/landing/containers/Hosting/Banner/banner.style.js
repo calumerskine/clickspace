@@ -163,7 +163,7 @@ export const List = styled.ul`
       color: #87909b;
       display: block;
       &:hover {
-        color: #eb4d4b;
+        color: #1100ff;
       }
     }
   }

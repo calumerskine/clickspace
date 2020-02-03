@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import NavbarWrapper from 'reusecore/src/elements/Navbar';
 import Drawer from 'reusecore/src/elements/Drawer';
 import Button from 'reusecore/src/elements/Button';
 import Logo from 'reusecore/src/elements/UI/Logo';
 import Box from 'reusecore/src/elements/Box';
+import Heading from 'reusecore/src/elements/Heading';
 import HamburgMenu from 'common/src/components/HamburgMenu';
 import Container from 'common/src/components/UI/Container';
 import { DrawerContext } from 'common/src/contexts/DrawerContext';
@@ -15,7 +17,7 @@ import ScrollSpyMenu from 'common/src/components/ScrollSpyMenu';
 
 import LogoImage from 'common/src/assets/image/hosting/logo.png';
 
-const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
+const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper, headingStyle }) => {
   const { state, dispatch } = useContext(DrawerContext);
 
   // Toggle drawer
@@ -29,27 +31,25 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
     <NavbarWrapper {...navbarStyle}>
       <Container>
         <Box {...row}>
-          <Logo
+          <Heading {...headingStyle}
+            content='Click Space.'
+          />
+          {/* <Logo
             href="#"
             logoSrc={LogoImage}
             title="MC Social"
             logoStyle={logoStyle}
-          />
+          /> */}
           <Box {...menuWrapper}>
             <ScrollSpyMenu
               className="main_menu"
               menuItems={MENU_ITEMS}
               offset={-70}
             />
-            <Link href="#">
-              <a className="navbar_button">
-                <Button {...button} title="BUY NOW" />
-              </a>
-            </Link>
             <Drawer
               width="420px"
               placement="right"
-              drawerHandler={<HamburgMenu barColor="#eb4d4b" />}
+              drawerHandler={<HamburgMenu barColor="#1100ff" />}
               open={state.isOpen}
               toggleHandler={toggleHandler}
             >
@@ -59,11 +59,6 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
                 drawerClose={true}
                 offset={-100}
               />
-              <Link href="#">
-                <a className="navbar_drawer_button">
-                  <Button {...button} title="BUY NOW" />
-                </a>
-              </Link>
             </Drawer>
           </Box>
         </Box>
@@ -78,6 +73,7 @@ Navbar.propTypes = {
   button: PropTypes.object,
   row: PropTypes.object,
   menuWrapper: PropTypes.object,
+  headingStyle: PropTypes.object
 };
 
 Navbar.defaultProps = {
@@ -111,6 +107,9 @@ Navbar.defaultProps = {
     flexBox: true,
     alignItems: 'center',
   },
+  headingStyle: {
+    mb: 0
+  }
 };
 
 export default Navbar;

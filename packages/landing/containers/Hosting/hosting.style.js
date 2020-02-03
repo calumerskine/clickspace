@@ -24,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
       width: 300px!important;
     }
     .drawer-content {
-      padding: 60px;    
+      padding: 60px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -52,13 +52,13 @@ export const GlobalStyle = createGlobalStyle`
               font-size: 18px;
             }
             &:hover {
-              color: #eb4d4b;
+              color: #1100ff;
             }
             &:before{
               content: '';
               width: 7px;
               height: 7px;
-              background: #eb4d4b;
+              background: #1100ff;
               border-radius: 50%;
               position: absolute;
               top: 50%;
@@ -69,7 +69,7 @@ export const GlobalStyle = createGlobalStyle`
           }
           &.is-current {
             a {
-              color: #eb4d4b;
+              color: #1100ff;
               &:before{
                 opacity: 1;
               }
@@ -100,13 +100,13 @@ export const GlobalStyle = createGlobalStyle`
         content: '\f10b';
         font-family: Flaticon;
         font-size: 26px;
-        color: #eb4d4b;
+        color: #1100ff;
         transform: rotate(45deg);
         display: block;
       }
     }
   }
-  
+
 
   /* Modal default style */
   button.modalCloseBtn {
@@ -150,7 +150,7 @@ export const ContentWrapper = styled.div`
         }
         &.is-current {
           a {
-            color: #eb4d4b;
+            color: #1100ff;
           }
         }
         a {
@@ -160,7 +160,7 @@ export const ContentWrapper = styled.div`
           color: #343d48;
           transition: 0.15s ease-in-out;
           &:hover {
-            color: #eb4d4b;
+            color: #1100ff;
           }
         }
       }
@@ -397,7 +397,7 @@ export const FeatureItem = styled(FeatureBlock)`
   }
 
   &:hover {
-    background-color: #eb4d4b;
+    background-color: #1100ff;
     &:before {
       opacity: 0.37;
     }

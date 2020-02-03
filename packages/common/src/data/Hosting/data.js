@@ -107,8 +107,8 @@ export const MENU_ITEMS = [
     offset: '70',
   },
   {
-    label: 'Feature',
-    path: '#feature_section',
+    label: 'About PPC',
+    path: '#about_section',
     offset: '70',
   },
   {
@@ -117,7 +117,7 @@ export const MENU_ITEMS = [
     offset: '70',
   },
   {
-    label: 'Testimonial',
+    label: 'Testimonials',
     path: '#testimonial_section',
     offset: '70',
   },
@@ -127,9 +127,10 @@ export const MENU_ITEMS = [
     offset: '70',
   },
   {
-    label: 'Contact',
+    label: 'Make Enquiry',
     path: '#contact_section',
     offset: '70',
+    button: true,
   },
 ];
 

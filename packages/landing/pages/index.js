@@ -31,9 +31,9 @@ export default () => {
     <ThemeProvider theme={hostingTheme}>
       <ParallaxProvider>
         <Head>
-          <title>MC Social</title>
-          <meta name="Description" content="MC Social" />
-          <meta name="theme-color" content="#eb4d4b" />
+          <title>Click Space | Revolutionary PPC</title>
+          <meta name="Description" content="Click Space" />
+          <meta name="theme-color" content="#1100ff" />
           <link
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900|Open+Sans:400,400i,600,700"
             rel="stylesheet"
@@ -59,7 +59,7 @@ export default () => {
           <AuditSection />
           <ServicesSection />
           <TestimonialSection />
-          <PricingSection />
+          {/* <PricingSection /> */}
           <GuaranteeSection />
           <FaqSection />
           <ContactSection />

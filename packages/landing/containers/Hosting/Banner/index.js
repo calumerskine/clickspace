@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Link from 'next/link';
 import Icon from 'react-icons-kit';
 import Box from 'reusecore/src/elements/Box';
@@ -60,9 +61,9 @@ const BannerSection = ({
               Navigating the online marketing world can be daunting. Without a digital partner, it can be hard to focus on your business whilst trying to design and run effective campaigns. Keeping them cost efficient is even harder.
             </Text>
           </Box>
-          {/* <Box {...searchArea}>
-            <SearchWrapper>
-              <Input
+          <Box {...searchArea}>
+            {/* <SearchWrapper> */}
+              {/* <Input
                 inputType="text"
                 placeholder="Enter your domain name"
                 iconPosition="right"
@@ -74,14 +75,16 @@ const BannerSection = ({
                 placeholder=".com"
                 className="domain_search_select"
                 aria-label="select options"
-              />
-              <Button
-                {...button}
-                icon={<Icon icon={search} size={24} />}
-                className="domain_search_button"
-              />
-            </SearchWrapper>
-            <List>
+              /> */}
+              <AnchorLink href='#contact_section'>
+                <Button
+                  {...button}
+                  icon={<Icon icon={search} size={24} />}
+                  className="domain_search_button"
+                />
+              </AnchorLink>
+            {/* </SearchWrapper> */}
+            {/* <List>
               {DOMAIN_PRICE.map((item, index) => (
                 <li key={`domain-list-${index}`}>
                   {item.url ? (
@@ -93,8 +96,8 @@ const BannerSection = ({
                   )}
                 </li>
               ))}
-            </List>
-          </Box> */}
+            </List> */}
+          </Box>
         </Box>
       </Container>
     </BannerWrapper>
@@ -139,7 +142,7 @@ BannerSection.defaultProps = {
     textAlign: 'center',
   },
   button: {
-    title: 'Search',
+    title: 'Start your free ads account audit',
     type: 'button',
     fontSize: '18px',
     fontWeight: '500',
@@ -150,14 +153,17 @@ BannerSection.defaultProps = {
     iconPosition: 'left',
   },
   searchArea: {
+    flexBox: true,
     className: 'search_area',
+    flexWrap: 'row',
+    justifyContent: 'center',
     width: ['100%', '100%', '80%', '100%', '70%'],
     mt: ['45px', '50px', '60px', '60px', '60px'],
   },
   discountAmount: {
     fontSize: ['13px', '14px', '14px', '14px', '14px'],
     fontWeight: '600',
-    color: '#eb4d4b',
+    color: '#1100ff',
     mb: 0,
     as: 'span',
     mr: '0.4em',
