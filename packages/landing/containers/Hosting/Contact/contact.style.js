@@ -14,7 +14,7 @@ export const ListItem = styled.div`
 
 export const ContactFromWrapper = styled.div`
   display: flex;
-  align-items: stretch;
+  justify-content: center;
   width: 490px;
   max-width: 100%;
   margin-left: auto;
@@ -31,7 +31,6 @@ export const ContactFromWrapper = styled.div`
 
   .email_input {
     flex-grow: 1;
-    margin-right: 20px;
     @media (max-width: 575px) {
       width: 100%;
       margin-right: 0;

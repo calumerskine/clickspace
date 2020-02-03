@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import Box from 'reusecore/src/elements/Box';
 import Text from 'reusecore/src/elements/Text';
 import Heading from 'reusecore/src/elements/Heading';
@@ -12,6 +13,7 @@ import {
   ContactFromWrapper,
   ListItem
 } from './contact.style';
+import { EnquiryForm } from 'common/src/components/EnquiryForm';
 
 const ContactSection = ({
   sectionWrapper,
@@ -49,15 +51,17 @@ const ContactSection = ({
         <Box {...row}>
           <Box {...contactForm}>
             <ContactFromWrapper>
-              <Input
-                inputType="email"
-                placeholder="Email address"
-                iconPosition="right"
-                isMaterial={false}
-                className="email_input"
-                aria-label="email"
+              <MailchimpSubscribe
+                url={'https://clickspaceagency.us4.list-manage.com/subscribe/post?u=63a2ccaca94288d0ea0d46213&amp;id=1b2aa52217'}
+                render={({ subscribe, status, message}) => (
+                  <EnquiryForm
+                    status={status}
+                    message={message}
+                    onSubmit={formData => subscribe(formData)}
+                  />
+                )}
               />
-              <Button {...button} title="REQUEST YOUR FREE AUDIT" />
+
             </ContactFromWrapper>
           </Box>
         </Box>
